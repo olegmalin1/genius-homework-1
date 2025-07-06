@@ -1,2 +1,3 @@
 # genius-homework-1
-homework1
+
+Beauty Zone HW
