@@ -1,0 +1,147 @@
+:root {
+  --color-primary-dark: #011c44;
+  --color-primary-white: #fff;
+  --color-brand-blue: #2b7fff;
+  --color-secondary-dark: #000;
+  --color-secondary-grey: #747272;
+  --color-button-description: #4a4a4a;
+}
+/* Base */
+body {
+  color: var(--color-primary-dark);
+}
+/* Links */
+.header-link {
+  font-weight: 400;
+  font-size: 18px;
+}
+.header-link:hover {
+  font-weight: 700;
+  color: var(--color-brand-blue);
+}
+.footer-link {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-primary-white);
+}
+.footer-link:hover {
+  font-weight: 700;
+  color: var(--color-brand-blue);
+}
+/* Main section */
+.main-section p {
+  font-weight: 400;
+  font-size: 18px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 81%;
+  text-transform: capitalize;
+  color: var(--color-brand-blue);
+}
+.main-button {
+  border: 2px solid var(--color-brand-blue);
+  border-radius: 32px;
+  padding: 16px 32px;
+  width: 219px;
+  height: 53px;
+  background-color: var(--color-primary-white);
+}
+.main-button:active {
+  background-color: var(--color-brand-blue);
+  color: var(--color-primary-white);
+}
+.button-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--color-button-description);
+}
+/* Common for all other sections */
+h2 {
+  font-weight: 700;
+  font-size: 64px;
+}
+h2 .accent {
+  color: var(--color-brand-blue);
+}
+/* About us section */
+.about-us-section h2 .accent {
+  text-transform: capitalize;
+}
+.about-us-section p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 173%;
+}
+.about-us-section p .accent {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+/* Why us section */
+.why-us-section ul {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--color-secondary-dark);
+}
+/* Procedures section */
+.procedures-section ul {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 118%;
+  color: var(--color-primary-white);
+}
+/* Contacts section */
+.form-card {
+  border-radius: 32px;
+  width: 423px;
+  height: 481px;
+  background-color: var(--color-primary-dark);
+}
+.form-card h3 {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  color: var(--color-primary-white);
+}
+.form-card h3 .accent {
+  color: var(--color-brand-blue);
+}
+.form li {
+  border: 2px solid var(--color-secondary-grey);
+  border-radius: 32px;
+  width: 310px;
+  height: 52px;
+}
+.form input::placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-primary-white);
+}
+.contacts-button {
+  border-radius: 32px;
+  padding: 16px 32px;
+  width: 281px;
+  height: 53px;
+  background-color: var(--color-brand-blue);
+  color: var(--color-primary-white);
+}
+.privacy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-secondary-grey);
+}
+.privacy .accent {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+/* Footer */
+footer p {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-secondary-grey);
+}

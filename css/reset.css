@@ -1,0 +1,77 @@
+/* 1. Remove margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Inherit font and size
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } */
+
+/* 3. Remove lists styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Images and videos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Inherit fonts for Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 7. Remove border-collapse by default */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 8. Buttons */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* 9. Remove default styles for blocks */
+address,
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
