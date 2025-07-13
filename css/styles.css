@@ -1,3 +1,41 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/play-v20-cyrillic_latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/play-v20-cyrillic_latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v48-cyrillic_latin_symbols-regular.woff2')
+    format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/roboto-v48-cyrillic_latin_symbols-600.woff2')
+    format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v48-cyrillic_latin_symbols-700.woff2')
+    format('woff2');
+}
 :root {
   --color-primary-dark: #011c44;
   --color-primary-white: #fff;
@@ -5,22 +43,23 @@
   --color-secondary-dark: #000;
   --color-secondary-grey: #747272;
   --color-button-description: #4a4a4a;
+  --main-font: 'Roboto', sans-serif;
+  --title-font: 'Play', sans-serif;
 }
 /* Base */
 body {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
   color: var(--color-primary-dark);
 }
 /* Links */
-.header-link {
-  font-weight: 400;
-  font-size: 18px;
-}
 .header-link:hover {
   font-weight: 700;
   color: var(--color-brand-blue);
 }
 .footer-link {
-  font-weight: 400;
   font-size: 16px;
   color: var(--color-primary-white);
 }
@@ -28,69 +67,74 @@ body {
   font-weight: 700;
   color: var(--color-brand-blue);
 }
-/* Main section */
-.main-section p {
-  font-weight: 400;
-  font-size: 18px;
-}
+/* hero section */
 h1 {
+  font-family: var(--title-font);
   font-weight: 700;
   font-size: 140px;
-  line-height: 81%;
+  line-height: 0.8;
   text-transform: capitalize;
   color: var(--color-brand-blue);
 }
-.main-button {
+/* Button */
+.button {
   border: 2px solid var(--color-brand-blue);
   border-radius: 32px;
   padding: 16px 32px;
   width: 219px;
   height: 53px;
   background-color: var(--color-primary-white);
+  font-weight: 600;
 }
-.main-button:active {
+.button:active {
   background-color: var(--color-brand-blue);
   color: var(--color-primary-white);
 }
 .button-description {
-  font-weight: 400;
   font-size: 12px;
-  line-height: 150%;
+  line-height: 1.5;
   color: var(--color-button-description);
 }
 /* Common for all other sections */
 h2 {
+  font-family: var(--title-font);
   font-weight: 700;
   font-size: 64px;
+  line-height: 1;
 }
 h2 .accent {
   color: var(--color-brand-blue);
 }
+h3 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+}
+h3 .accent {
+  color: var(--color-brand-blue);
+}
 /* About us section */
-.about-us-section h2 .accent {
+.about-us-title {
   text-transform: capitalize;
 }
-.about-us-section p {
-  font-weight: 400;
+.about-us-text {
   font-size: 22px;
-  line-height: 173%;
+  line-height: 1.73;
 }
-.about-us-section p .accent {
+.about-us-text .accent {
   font-weight: 600;
   text-transform: capitalize;
 }
 /* Why us section */
-.why-us-section ul {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 133%;
+.why-us-list {
+  line-height: 1.33;
   color: var(--color-secondary-dark);
 }
 /* Procedures section */
-.procedures-section ul {
-  font-weight: 400;
+.procedures-list {
   font-size: 22px;
-  line-height: 118%;
+  line-height: 1.18;
   color: var(--color-primary-white);
 }
 /* Contacts section */
@@ -100,38 +144,26 @@ h2 .accent {
   height: 481px;
   background-color: var(--color-primary-dark);
 }
-.form-card h3 {
-  font-weight: 600;
-  font-size: 22px;
-  text-align: center;
+.form-card-title {
   color: var(--color-primary-white);
+  text-align: center;
 }
-.form-card h3 .accent {
-  color: var(--color-brand-blue);
-}
-.form li {
+input {
   border: 2px solid var(--color-secondary-grey);
   border-radius: 32px;
   width: 310px;
   height: 52px;
 }
-.form input::placeholder {
-  font-weight: 400;
+input::placeholder {
   font-size: 13px;
   color: var(--color-primary-white);
 }
-.contacts-button {
-  border-radius: 32px;
-  padding: 16px 32px;
-  width: 281px;
-  height: 53px;
-  background-color: var(--color-brand-blue);
-  color: var(--color-primary-white);
+input:focus {
+  background-color: var(--color-secondary-grey);
 }
 .privacy {
-  font-weight: 400;
   font-size: 12px;
-  line-height: 150%;
+  line-height: 1.5;
   text-align: center;
   color: var(--color-secondary-grey);
 }
@@ -140,8 +172,7 @@ h2 .accent {
   text-decoration-skip-ink: none;
 }
 /* Footer */
-footer p {
-  font-weight: 400;
+.copy-rights {
   font-size: 13px;
   color: var(--color-secondary-grey);
 }

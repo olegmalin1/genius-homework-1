@@ -43,7 +43,7 @@
       </address>
     </header>
     <main>
-      <section class="main-section">
+      <section class="hero-section">
         <img
           src="./images/on-the-procedure.jpg"
           alt="Client is on the procedure"
@@ -53,27 +53,29 @@
           beauty<br />
           zone
         </h1>
-        <button class="main-button" type="button">Замовити дзвінок</button>
+        <button class="button" type="button">Замовити дзвінок</button>
         <p class="button-description">
           Запишись та отримай безкоштовну<br />
           консультацію нашого косметолога
         </p>
       </section>
       <section id="about-us" class="about-us-section">
-        <h2>
+        <h2 class="about-us-title">
           Перевтілюйтесь<br />
           в <span class="accent" lang="en">beauty zone!</span>
         </h2>
-        <p>
-          Наша косметологічна клініка пропонує вам професійні послуги з догляду
-          за шкірою обличчя та тіла.
-        </p>
-        <p>
-          B <span class="accent" lang="en">beauty zone</span> ми гарантуємо
-          найвищі стандарти якості та приємний сервіс. Наші косметологічні
-          процедури та препарати допоможуть вам підтримувати свою красу та
-          молодість. З нами краса назавжди!
-        </p>
+        <div class="about-us-text">
+          <p>
+            Наша косметологічна клініка пропонує вам професійні послуги з
+            догляду за шкірою обличчя та тіла.
+          </p>
+          <p>
+            B <span class="accent" lang="en">beauty zone</span> ми гарантуємо
+            найвищі стандарти якості та приємний сервіс. Наші косметологічні
+            процедури та препарати допоможуть вам підтримувати свою красу та
+            молодість. З нами краса назавжди!
+          </p>
+        </div>
         <img src="./images/before.jpg" alt="Photo before" />
         <img src="./images/after.jpg" alt="Photo after" />
       </section>
@@ -82,7 +84,7 @@
           Чому люди<br />
           <span class="accent">обирають нас</span>
         </h2>
-        <ul>
+        <ul class="why-us-list">
           <li>
             <img
               src="./images/game-icons_materials-science.svg"
@@ -114,7 +116,7 @@
       </section>
       <section id="procedures" class="procedures-section">
         <h2>Наші <span class="accent">процедури</span></h2>
-        <ul>
+        <ul class="procedures-list">
           <li>
             <img src="./images/mask.jpg" alt="Making mask" />
             <p>Маски для обличчя</p>
@@ -140,25 +142,19 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="form-card">
-          <h3>
+          <h3 class="form-card-title">
             Запишіться <span class="accent">безкоштовно</span> <br />
             та отримайте подарунок
           </h3>
           <form class="form" action="">
-            <ul>
-              <li><input type="text" placeholder="Ваше ім'я та прізвище" /></li>
-              <li><input type="tel" placeholder="Ваш номер телефону" /></li>
-              <li>
-                <input type="email" placeholder="Ваша електронна пошта" />
-              </li>
-              <button class="contacts-button" type="submit">
-                Записатись безкоштовно
-              </button>
-              <p class="privacy">
-                Натискаючи на кнопку я погоджуюсь<br />
-                <a class="accent" href="#">з політикою конфіденційності</a>
-              </p>
-            </ul>
+            <input type="text" placeholder="Ваше ім'я та прізвище" />
+            <input type="tel" placeholder="Ваш номер телефону" />
+            <input type="email" placeholder="Ваша електронна пошта" />
+            <button class="button" type="submit">Записатись безкоштовно</button>
+            <p class="privacy">
+              Натискаючи на кнопку я погоджуюсь<br />
+              <a class="accent" href="#">з політикою конфіденційності</a>
+            </p>
           </form>
         </div>
       </section>
@@ -215,7 +211,7 @@
         </ul>
       </address>
       <a class="footer-link" href="#">Політика конфіденційності</a>
-      <p>&copy; 2022 Дані захищені</p>
+      <p class="copy-rights">&copy; 2022 Дані захищені</p>
     </footer>
   </body>
 </html>
