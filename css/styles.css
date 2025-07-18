@@ -40,17 +40,11 @@
   --title-font: 'Play', sans-serif;
 }
 /* Base */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
+  margin: 0;
 }
 body {
   font-family: var(--main-font);
@@ -66,56 +60,7 @@ body {
   padding: 0 16px;
 }
 .section {
-  padding: 48px 0;
-}
-/* Links */
-.header-link:hover {
-  font-weight: 700;
-  color: var(--color-brand-blue);
-}
-.footer-link {
-  font-size: 16px;
-  color: var(--color-primary-white);
-}
-.footer-link:hover {
-  font-weight: 700;
-  color: var(--color-brand-blue);
-}
-/* hero section */
-.hero-section {
-  padding: 123px 0 126px 0;
-}
-.hero-subtitle {
-  margin-bottom: 16px;
-}
-.hero-title {
-  margin-bottom: 40px;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 140px;
-  line-height: 0.8;
-  text-transform: capitalize;
-  color: var(--color-brand-blue);
-}
-.hero-button {
-  margin-bottom: 14px;
-}
-/* Button */
-.button {
-  padding: 16px 32px;
-  border: 2px solid var(--color-brand-blue);
-  border-radius: 32px;
-  background-color: var(--color-primary-white);
-  font-weight: 600;
-}
-.button:active {
-  background-color: var(--color-brand-blue);
-  color: var(--color-primary-white);
-}
-.button-description {
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--color-button-description);
+  margin: 48px 0;
 }
 /* Common for all other sections */
 h2 {
@@ -139,9 +84,60 @@ h3 .accent {
 .section-title {
   margin-bottom: 48px;
 }
+/* Links */
+.header-link:hover {
+  font-weight: 700;
+  color: var(--color-brand-blue);
+}
+.footer-link {
+  font-size: 16px;
+  color: var(--color-primary-white);
+}
+.footer-link:hover {
+  font-weight: 700;
+  color: var(--color-brand-blue);
+}
+/* Button */
+.button {
+  padding: 16px 32px;
+  border: 2px solid var(--color-brand-blue);
+  border-radius: 32px;
+  background-color: var(--color-primary-white);
+  font-weight: 600;
+}
+.button:active {
+  background-color: var(--color-brand-blue);
+  color: var(--color-primary-white);
+}
+.button-description {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-button-description);
+}
+/* hero section */
+.hero-section {
+  padding: 122px 0 126px 106px;
+  margin: 0;
+}
+.hero-subtitle {
+  margin-bottom: 16px;
+}
+.hero-title {
+  margin-bottom: 40px;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 0.8;
+  text-transform: capitalize;
+  color: var(--color-brand-blue);
+}
+.hero-button {
+  margin-bottom: 14px;
+}
 /* About us section */
 .about-us-section {
-  padding: 0 0 128px 0;
+  margin-top: 0;
+  margin-bottom: 128px;
 }
 .about-us-title {
   margin: 40px 0;
@@ -161,6 +157,9 @@ h3 .accent {
   margin-bottom: 40px;
 }
 /* Why us section */
+.why-us-title {
+  text-align: center;
+}
 .why-us-list {
   line-height: 1.33;
   color: var(--color-secondary-dark);
@@ -176,6 +175,9 @@ h3 .accent {
   margin: 5px 102px 8px 102px;
 }
 /* Procedures section */
+.procedures-title {
+  text-align: center;
+}
 .procedures-list {
   font-size: 22px;
   line-height: 1.18;
@@ -183,7 +185,10 @@ h3 .accent {
 }
 /* Contacts section */
 .contacts-section {
-  padding: 48px 0 96px 0;
+  margin-bottom: 96px;
+}
+.contacts-title {
+  text-align: center;
 }
 .form-card {
   padding: 48px 57px 48px 56px;
