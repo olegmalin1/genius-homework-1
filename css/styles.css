@@ -55,7 +55,7 @@ body {
   color: var(--color-primary-dark);
   background-image: url(../images/main-background.svg);
   background-repeat: no-repeat;
-  background-position: center 1400px;
+  background-position: center 1424px;
   background-size: contain;
 }
 .container {
@@ -208,7 +208,7 @@ h3 .accent {
   margin-bottom: 40px;
 }
 .about-us-images-container {
-  max-width: 499px;
+  width: 499px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -219,6 +219,12 @@ h3 .accent {
   width: 327px;
   height: 327px;
   object-fit: cover;
+}
+.before-image {
+  align-self: flex-start;
+}
+.after-image {
+  align-self: flex-end;
 }
 /* Why us section */
 .why-us-title {
