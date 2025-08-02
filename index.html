@@ -59,13 +59,15 @@
         <div class="container">
           <p class="hero-subtitle">Косметологічна клініка</p>
           <h1 class="hero-title" lang="en">beauty <br />zone</h1>
-          <button class="button hero-button" type="button">
-            Замовити дзвінок
-          </button>
-          <p class="button-description">
-            Запишись та отримай безкоштовну<br />
-            консультацію нашого косметолога
-          </p>
+          <div class="hero-button-container">
+            <button class="button hero-button" type="button">
+              Замовити дзвінок
+            </button>
+            <p class="button-description">
+              Запишись та отримай безкоштовну<br />
+              консультацію нашого косметолога
+            </p>
+          </div>
         </div>
       </section>
       <section id="about-us" class="section about-us-section">
@@ -163,28 +165,37 @@
             </button>
             <ul class="procedures-list">
               <li>
-                <img
-                  class="procedures-image"
-                  src="./images/mask.jpg"
-                  alt="Making mask"
-                />
-                <p>Маски для обличчя</p>
+                <div class="procedures-image-container">
+                  <img
+                    class="procedures-image"
+                    src="./images/mask.jpg"
+                    alt="Making mask"
+                  />
+                  <div class="gradient-overlay"></div>
+                  <p class="procedures-image-text">Маски для обличчя</p>
+                </div>
               </li>
               <li>
-                <img
-                  class="procedures-image"
-                  src="./images/injection.jpg"
-                  alt="Doing injection"
-                />
-                <p>Ін'єкції для обличчя</p>
+                <div class="procedures-image-container">
+                  <img
+                    class="procedures-image"
+                    src="./images/injection.jpg"
+                    alt="Doing injection"
+                  />
+                  <div class="gradient-overlay"></div>
+                  <p class="procedures-image-text">Ін'єкції для обличчя</p>
+                </div>
               </li>
               <li>
-                <img
-                  class="procedures-image"
-                  src="./images/clean-face.jpg"
-                  alt="Clean face demonstration"
-                />
-                <p>Очищення обличчя</p>
+                <div class="procedures-image-container">
+                  <img
+                    class="procedures-image"
+                    src="./images/clean-face.jpg"
+                    alt="Clean face demonstration"
+                  />
+                  <div class="gradient-overlay"></div>
+                  <p class="procedures-image-text">Очищення обличчя</p>
+                </div>
               </li>
             </ul>
             <button class="carousel-button" type="button">
