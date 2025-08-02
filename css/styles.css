@@ -204,10 +204,11 @@ h3 .accent {
   font-weight: 600;
   text-transform: capitalize;
 }
-.about-us-text-first-paragraph {
+.about-us-text p:not(:last-child) {
   margin-bottom: 40px;
 }
 .about-us-images-container {
+  position: relative;
   width: 499px;
   display: flex;
   flex-direction: column;
@@ -225,6 +226,27 @@ h3 .accent {
 }
 .after-image {
   align-self: flex-end;
+}
+.about-us-icon-star1 {
+  position: absolute;
+  top: 343px;
+  left: 123px;
+  fill: var(--color-footer-dark-blue);
+  transform: rotate(-30deg);
+}
+.about-us-icon-star2 {
+  position: absolute;
+  top: 32px;
+  left: 480px;
+  fill: var(--color-brand-blue);
+  transform: rotate(30deg);
+}
+.about-us-icon-star3 {
+  position: absolute;
+  top: 270px;
+  left: 480px;
+  fill: var(--color-secondary-grey);
+  transform: rotate(-23deg);
 }
 /* Why us section */
 .why-us-title {
@@ -363,6 +385,14 @@ input:focus {
 /* Footer */
 .footer {
   padding: 56px 0;
+  position: relative;
+  height: 278px;
+  padding: 56px 100px;
+  background-color: var(--color-primary-dark);
+  background-image: url(../images/background-footer.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .copy-rights {
   font-size: 13px;
@@ -396,12 +426,53 @@ input:focus {
   display: block;
   margin-bottom: 16px;
 }
-footer {
-  height: 278px;
-  padding: 56px 100px;
+footer::after {
+  position: absolute;
+  width: 247px;
+  height: 152px;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/footer-spray.svg);
+  background-repeat: no-repeat;
+  content: '';
+}
+/* Modal window */
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #011f4a66;
+  backdrop-filter: blur(4px);
+}
+.backdrop.is-open {
+  display: flex;
+}
+.modal {
+  position: relative;
+  padding: 42px 144px;
+  border-radius: 48px;
+  width: 723px;
+  height: 681px;
   background-color: var(--color-primary-dark);
-  background-image: url(../images/background-footer.svg);
+  background-image: url(../images/modal-background.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.modal-close-button {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+  fill: var(--color-primary-white);
+  cursor: pointer;
+}
+.modal-title {
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--color-primary-white);
 }

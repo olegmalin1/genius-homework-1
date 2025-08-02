@@ -58,10 +58,7 @@
       <section class="hero-section section">
         <div class="container">
           <p class="hero-subtitle">Косметологічна клініка</p>
-          <h1 class="hero-title" lang="en">
-            beauty<br />
-            zone
-          </h1>
+          <h1 class="hero-title" lang="en">beauty <br />zone</h1>
           <button class="button hero-button" type="button">
             Замовити дзвінок
           </button>
@@ -80,7 +77,7 @@
                 в <span class="accent" lang="en">beauty zone!</span>
               </h2>
               <div class="about-us-text">
-                <p class="about-us-text-first-paragraph">
+                <p>
                   Наша косметологічна клініка пропонує вам професійні послуги з
                   догляду за шкірою обличчя та тіла.
                 </p>
@@ -103,6 +100,15 @@
                 src="./images/after.jpg"
                 alt="Photo after"
               />
+              <svg class="about-us-icon-star1" width="64" height="64">
+                <use href="./images/icons.svg#icon-star"></use>
+              </svg>
+              <svg class="about-us-icon-star2" width="40" height="40">
+                <use href="./images/icons.svg#icon-star"></use>
+              </svg>
+              <svg class="about-us-icon-star3" width="16" height="16">
+                <use href="./images/icons.svg#icon-star"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -241,9 +247,7 @@
               </li>
               <li><a class="footer-link" href="#why-us">Чому ми</a></li>
               <li>
-                <a class="footer-link" href="#procedures"
-                  >Наші процедури</a
-                >
+                <a class="footer-link" href="#procedures">Наші процедури</a>
               </li>
               <li>
                 <a class="footer-link" href="#contacts">Контакти</a>
@@ -305,5 +309,32 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <svg width="32" height="32">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <h3 class="form-card-title">
+          Запишіться <span class="accent">безкоштовно</span><br />
+          та отримайте подарунок
+        </h3>
+        <form class="form" action="#">
+          <input type="text" placeholder="Ваше ім'я та прізвище" />
+          <input type="tel" placeholder="Ваш номер телефону" />
+          <input type="email" placeholder="Ваша електронна пошта" />
+          <button class="button form-button" type="submit">
+            Записатись безкоштовно
+          </button>
+          <p class="privacy">
+            Натискаючи на кнопку я погоджуюсь<br />
+            <a class="accent" href="#">з політикою конфіденційності</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
