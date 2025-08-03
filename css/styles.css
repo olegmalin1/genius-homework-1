@@ -55,7 +55,7 @@ body {
   color: var(--color-primary-dark);
   background-image: url(../images/main-background.svg);
   background-repeat: no-repeat;
-  background-position: center 1424px;
+  background-position: center 1324px;
   background-size: contain;
 }
 .container {
@@ -90,17 +90,18 @@ h3 .accent {
   margin-bottom: 48px;
 }
 /* Links */
-.header-link:hover {
+.header-link:hover,
+.footer-link:hover {
   color: var(--color-brand-blue);
   text-shadow: 0 0 1px currentColor;
+}
+.header-link,
+.footer-link {
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 .footer-link {
   font-size: 16px;
   color: var(--color-primary-white);
-}
-.footer-link:hover {
-  color: var(--color-brand-blue);
-  text-shadow: 0 0 1px currentColor;
 }
 /* Button */
 .button {
@@ -115,6 +116,14 @@ h3 .accent {
   color: var(--color-primary-white);
 }
 /* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -292,6 +301,10 @@ h3 .accent {
   border-radius: 50%;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 .carousel-button:hover {
   background-color: var(--color-brand-blue);
@@ -315,6 +328,10 @@ h3 .accent {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.procedures-image-container:hover {
+  transform: scale(1.05);
 }
 .gradient-overlay {
   position: absolute;
@@ -363,8 +380,10 @@ h3 .accent {
 .form-card {
   padding: 48px 57px 48px 56px;
   border-radius: 32px;
-  width: 423px;
-  height: 481px;
+  width: 100%;
+  max-width: 423px;
+  height: 100%;
+  max-height: 481px;
   background-color: var(--color-primary-dark);
 }
 .form-card-title {
@@ -461,7 +480,9 @@ footer::after {
 }
 /* Modal window */
 .backdrop {
-  display: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -471,16 +492,26 @@ footer::after {
   align-items: center;
   background-color: #011f4a66;
   backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .backdrop.is-open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  padding: 20px;
 }
 .modal {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding: 42px 144px;
+  padding: 42px 20px;
   border-radius: 48px;
-  width: 723px;
-  height: 681px;
+  width: 100%;
+  max-width: 723px;
+  height: 100%;
+  max-height: 681px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: auto;
   background-color: var(--color-primary-dark);
   background-image: url(../images/modal-background.svg);
   background-repeat: no-repeat;
@@ -495,7 +526,7 @@ footer::after {
   cursor: pointer;
 }
 .modal-title {
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
   color: var(--color-primary-white);
 }
