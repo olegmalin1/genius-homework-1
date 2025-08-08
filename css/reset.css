@@ -1,5 +1,7 @@
 /* 1. Remove margin and padding */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,4 +76,9 @@ main,
 nav,
 section {
   display: block;
+}
+
+/* 10. Remove default styles for addres */
+address {
+  font-style: normal;
 }
