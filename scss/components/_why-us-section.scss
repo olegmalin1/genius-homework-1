@@ -1,0 +1,26 @@
+.why-us-title {
+  text-align: center;
+}
+.why-us-list {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 56px;
+  max-width: 1060px;
+  line-height: 1.33;
+  color: var(--color-secondary-dark);
+}
+.why-us-item {
+  padding: 24px 32px;
+  border-radius: 32px;
+  width: 316px;
+  height: 181px;
+  background-color: var(--color-primary-white);
+  text-align: center;
+}
+.why-us-icon {
+  margin: 5px 102px 8px 102px;
+  height: 42px;
+  width: 42px;
+  fill: var(--color-brand-blue);
+}

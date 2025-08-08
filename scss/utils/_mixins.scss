@@ -1,0 +1,9 @@
+@mixin about-us-star($top, $left, $angle, $base-color, $animation) {
+  --angle: #{$angle};
+  --base-color: #{$base-color};
+  position: absolute;
+  top: #{$top};
+  left: #{$left};
+  fill: var(--base-color);
+  animation: #{$animation};
+}

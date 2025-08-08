@@ -1,0 +1,34 @@
+.button {
+  padding: 16px 32px;
+  border: 2px solid var(--color-brand-blue);
+  border-radius: 32px;
+  background-color: var(--color-primary-white);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.button:active {
+  background-color: var(--color-brand-blue);
+  color: var(--color-primary-white);
+}
+.carousel-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  fill: var(--color-primary-dark);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+.carousel-button:hover {
+  background-color: var(--color-brand-blue);
+  border: 2px solid var(--color-primary-white);
+  fill: var(--color-primary-white);
+}

@@ -1,0 +1,13 @@
+.header-link:hover,
+.footer-link:hover {
+  color: var(--color-brand-blue);
+  text-shadow: 0 0 1px currentColor;
+}
+.header-link,
+.footer-link {
+  transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+.footer-link {
+  font-size: 16px;
+  color: var(--color-primary-white);
+}

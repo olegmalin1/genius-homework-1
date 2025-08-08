@@ -1,0 +1,21 @@
+h2 {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+}
+h2 .accent {
+  color: var(--color-brand-blue);
+}
+h3 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+}
+h3 .accent {
+  color: var(--color-brand-blue);
+}
+.section-title {
+  margin-bottom: 48px;
+}
