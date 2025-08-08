@@ -226,10 +226,52 @@
                 Запишіться <span class="accent">безкоштовно</span> <br />
                 та отримайте подарунок
               </h3>
-              <form class="form" action="#">
-                <input type="text" placeholder="Ваше ім'я та прізвище" />
-                <input type="tel" placeholder="Ваш номер телефону" />
-                <input type="email" placeholder="Ваша електронна пошта" />
+              <form class="form" name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="visually-hidden" for="form-name"
+                    >Ваше ім'я та прізвище</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="form-name"
+                    id="form-name"
+                    placeholder="Ваше ім'я та прізвище"
+                    pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’\-]+ [A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’\-]+$"
+                    title="Введіть ім'я та прізвище, розділені пробілом"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="visually-hidden" for="form-phone"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="form-phone"
+                    id="form-phone"
+                    placeholder="Ваш номер телефону"
+                    pattern="^\+380\d{9}$"
+                    title="Введіть номер у форматі +380XXXXXXXXX"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="visually-hidden" for="form-email"
+                    >Ваша електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="form-email"
+                    id="form-email"
+                    placeholder="Ваша електронна пошта"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    title="Введіть коректну електронну пошту"
+                    required
+                  />
+                </div>
                 <button class="button form-button" type="submit">
                   Записатись безкоштовно
                 </button>
@@ -335,10 +377,52 @@
           Запишіться <span class="accent">безкоштовно</span><br />
           та отримайте подарунок
         </h3>
-        <form class="form" action="#">
-          <input type="text" placeholder="Ваше ім'я та прізвище" />
-          <input type="tel" placeholder="Ваш номер телефону" />
-          <input type="email" placeholder="Ваша електронна пошта" />
+        <form class="form" name="modal-form" autocomplete="off">
+          <div class="form-field">
+            <label class="visually-hidden" for="modal-name"
+              >Ваше ім'я та прізвище</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              name="modal-name"
+              id="modal-name"
+              placeholder="Ваше ім'я та прізвище"
+              pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’\-]+ [A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’\-]+$"
+              title="Введіть ім'я та прізвище, розділені пробілом"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label class="visually-hidden" for="modal-phone"
+              >Ваш номер телефону</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="modal-phone"
+              id="modal-phone"
+              placeholder="Ваш номер телефону"
+              pattern="^\+380\d{9}$"
+              title="Введіть номер у форматі +380XXXXXXXXX"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label class="visually-hidden" for="modal-email"
+              >Ваша електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="modal-email"
+              id="modal-email"
+              placeholder="Ваша електронна пошта"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Введіть коректну електронну пошту"
+              required
+            />
+          </div>
           <button class="button form-button" type="submit">
             Записатись безкоштовно
           </button>
