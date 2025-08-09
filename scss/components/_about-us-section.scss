@@ -1,3 +1,5 @@
+@use '../utils/mixins' as mixins;
+
 .about-us-section {
   margin-top: 0;
   margin-bottom: 176px;
@@ -47,7 +49,7 @@
   align-self: flex-end;
 }
 .about-us-icon-star1 {
-  @include about-us-star(
+  @include mixins.about-us-star(
     343px,
     123px,
     -30deg,
@@ -57,7 +59,7 @@
 }
 
 .about-us-icon-star2 {
-  @include about-us-star(
+  @include mixins.about-us-star(
     32px,
     480px,
     30deg,
@@ -67,7 +69,7 @@
 }
 
 .about-us-icon-star3 {
-  @include about-us-star(
+  @include mixins.about-us-star(
     270px,
     480px,
     -23deg,
