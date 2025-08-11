@@ -1,6 +1,6 @@
 // Get modal elements
 const modal = document.querySelector('.backdrop');
-const openModalBtn = document.querySelector('.hero-button');
+const openModalBtn = document.querySelector('.hero-section__button');
 const closeModalBtn = document.querySelector('.modal-close-button');
 
 // Open modal

@@ -1,0 +1,36 @@
+.hero-section {
+  padding: 122px 0 126px 0;
+  margin: 0 auto;
+  background-image: url(../images/hero-background-test.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+
+  &__text-container {
+    margin-left: 106px;
+  }
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 0.8;
+    text-transform: capitalize;
+    color: var(--color-brand-blue);
+  }
+  &__button-container {
+    max-width: 238px;
+  }
+  &__button {
+    margin-bottom: 14px;
+  }
+  &__button-description {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-button-description);
+  }
+}

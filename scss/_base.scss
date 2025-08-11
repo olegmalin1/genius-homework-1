@@ -18,3 +18,7 @@ body {
 .section {
   margin: 96px 0;
 }
+.logo {
+  display: flex;
+  flex-shrink: 0;
+}

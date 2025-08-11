@@ -1,0 +1,18 @@
+.contacts-section {
+  margin-bottom: 96px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1059px;
+    gap: 32px;
+    margin: 0 auto;
+  }
+  &__map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 32px;
+  }
+  &__form-field {
+    margin-bottom: 16px;
+  }
+}

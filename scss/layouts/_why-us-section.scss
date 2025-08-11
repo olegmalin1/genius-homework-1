@@ -1,0 +1,28 @@
+.why-us-section {
+  &__title {
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 56px;
+    max-width: 1060px;
+    line-height: 1.33;
+    color: var(--color-secondary-dark);
+  }
+  &__item {
+    padding: 24px 32px;
+    border-radius: 32px;
+    width: 316px;
+    height: 181px;
+    background-color: var(--color-primary-white);
+    text-align: center;
+    &__icon {
+      margin: 5px 102px 8px 102px;
+      height: 42px;
+      width: 42px;
+      fill: var(--color-brand-blue);
+    }
+  }
+}

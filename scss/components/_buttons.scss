@@ -5,11 +5,12 @@
   background-color: var(--color-primary-white);
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  &:active {
+    background-color: var(--color-brand-blue);
+    color: var(--color-primary-white);
+  }
 }
-.button:active {
-  background-color: var(--color-brand-blue);
-  color: var(--color-primary-white);
-}
+
 .carousel-button {
   display: flex;
   flex-shrink: 0;
@@ -23,12 +24,19 @@
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  &.next {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: var(--color-brand-blue);
+    border: 2px solid var(--color-primary-white);
+    fill: var(--color-primary-white);
+  }
 }
-.carousel-button.next {
-  transform: rotate(180deg);
-}
-.carousel-button:hover {
-  background-color: var(--color-brand-blue);
-  border: 2px solid var(--color-primary-white);
+.modal-close-button {
+  position: absolute;
+  top: 42px;
+  right: 42px;
   fill: var(--color-primary-white);
+  cursor: pointer;
 }

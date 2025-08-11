@@ -1,0 +1,30 @@
+@use '../utils/mixins' as mixins;
+.decoration-star1 {
+  @include mixins.about-us-star(
+    343px,
+    123px,
+    -30deg,
+    var(--color-footer-dark-blue),
+    blinkScaleColor 3s ease-in-out infinite
+  );
+}
+
+.decoration-star2 {
+  @include mixins.about-us-star(
+    32px,
+    480px,
+    30deg,
+    var(--color-brand-blue),
+    blinkScaleColor 2.5s ease-in-out infinite
+  );
+}
+
+.decoration-star3 {
+  @include mixins.about-us-star(
+    270px,
+    480px,
+    -23deg,
+    var(--color-secondary-grey),
+    blinkScaleColor 2s ease-in-out infinite
+  );
+}

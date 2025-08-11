@@ -1,0 +1,16 @@
+.procedures-section {
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}

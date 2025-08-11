@@ -1,0 +1,42 @@
+.about-us-section {
+  margin-top: 0;
+  margin-bottom: 176px;
+
+  &__container {
+    display: flex;
+    gap: 32px;
+  }
+  &__text-container {
+    max-width: 709px;
+  }
+  &__title {
+    margin: 40px 0;
+  }
+  &__text {
+    font-size: 22px;
+    line-height: 1.73;
+  }
+  &__text p:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+.about-us-images {
+  position: relative;
+  width: 499px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-shrink: 0;
+  &__image {
+    border-radius: 50%;
+    width: 327px;
+    height: 327px;
+    object-fit: cover;
+  }
+  &__before-image {
+    align-self: flex-start;
+  }
+  &__after-image {
+    align-self: flex-end;
+  }
+}
