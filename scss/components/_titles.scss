@@ -1,8 +1,13 @@
+@use '../utils/variables' as *;
 h2 {
   font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 64px;
+  font-weight: 500;
+  font-size: 32px;
   line-height: 1;
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 64px;
+    font-weight: 700;
+  }
 }
 h3 {
   font-family: var(--title-font);
@@ -11,5 +16,8 @@ h3 {
   line-height: 1;
 }
 .section-title {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+  @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 48px;
+  }
 }

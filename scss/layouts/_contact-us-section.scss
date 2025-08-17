@@ -1,16 +1,31 @@
+@use '../utils/variables' as *;
 .contacts-section {
-  margin-bottom: 96px;
   &__container {
     display: flex;
-    justify-content: space-between;
-    max-width: 1059px;
-    gap: 32px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
     margin: 0 auto;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1059px;
+      gap: 32px;
+      align-items: stretch;
+    }
   }
   &__map {
+    width: 100vw;
+    height: 232px;
     flex-shrink: 0;
     border: none;
-    border-radius: 32px;
+    @media screen and (min-width: $bp-tablet) {
+      width: 100%;
+      max-width: 605px;
+      height: auto;
+      flex: 1;
+      border-radius: 32px;
+    }
   }
   &__form-field {
     margin-bottom: 16px;

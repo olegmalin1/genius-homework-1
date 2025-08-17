@@ -1,16 +1,22 @@
+@use '../utils/variables' as *;
 .procedures-section {
   &__title {
     text-align: center;
   }
-  &__content {
-    display: flex;
+  &__slider {
+    display: flex !important;
+    flex-direction: row !important;
     gap: 32px;
     align-items: center;
-  }
-  &__list {
-    display: flex;
-    flex-shrink: 0;
+    width: 100%;
     justify-content: space-between;
-    gap: 16px;
+  }
+  &__container {
+    overflow: hidden;
+    flex: 1;
+    max-width: 100%;
+    @media screen and (min-width: $bp-tablet) {
+      max-width: calc(100% - 120px);
+    }
   }
 }

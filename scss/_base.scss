@@ -1,3 +1,4 @@
+@use 'utils/variables' as *;
 body {
   font-family: var(--main-font);
   font-size: 18px;
@@ -6,8 +7,15 @@ body {
   color: var(--color-primary-dark);
   background-image: url(../images/main-background.svg);
   background-repeat: no-repeat;
-  background-position: center 1324px;
-  background-size: contain;
+  background-position: center 580px;
+  background-size: auto;
+  @media screen and (min-width: $bp-tablet) {
+    background-position: center 940px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    background-position: center 1320px;
+    background-size: contain;
+  }
 }
 .container {
   width: 100%;
@@ -16,9 +24,33 @@ body {
   padding: 0 16px;
 }
 .section {
-  margin: 96px 0;
+  margin: 40px 0;
+  @media screen and (min-width: $bp-tablet) {
+    margin: 96px 0;
+  }
+}
+.section:last-child {
+  margin-bottom: 0;
+  @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 48px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 96px;
+  }
 }
 .logo {
-  display: flex;
-  flex-shrink: 0;
+  width: 57px;
+  height: 30px;
+  @media screen and (min-width: $bp-tablet) {
+    width: 74px;
+    height: 42px;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.is-scroll-disabled {
+  overflow: hidden;
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauty Zone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -50,6 +54,76 @@
               </li>
             </ul>
           </address>
+          <button type="button" class="header__burger menu-btn-open">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <div class="logo mobile-menu__logo">
+              <a href="./index.html"
+                ><img src="./images/logo.svg" alt="beauty zone logo"
+              /></a>
+            </div>
+            <div class="mobile-menu__close-button menu-btn-close">
+              <button class="mobile-menu__close-icon" type="button">
+                <svg width="24" height="24">
+                  <use href="./images/menu-close.svg"></use>
+                </svg>
+              </button>
+            </div>
+            <nav>
+              <ul class="mobile-menu__navigation">
+                <li>
+                  <a class="link mobile-menu__navigation__link" href="#about-us"
+                    >Про нас</a
+                  >
+                </li>
+                <li>
+                  <a class="link mobile-menu__navigation__link" href="#why-us"
+                    >Чому ми</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="link mobile-menu__navigation__link"
+                    href="#procedures"
+                    >Наші процедури</a
+                  >
+                </li>
+                <li>
+                  <a class="link mobile-menu__navigation__link" href="#contacts"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <address>
+              <ul class="mobile-menu__address-list">
+                <li>
+                  <a href="#">
+                    <svg class="mobile-menu__socials" width="32" height="32">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="mobile-menu__socials" width="32" height="32">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="mobile-menu__socials" width="32" height="32">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
         </div>
       </div>
     </header>
@@ -58,7 +132,7 @@
         <div class="container">
           <div class="hero-section__text-container">
             <p class="hero-section__subtitle">Косметологічна клініка</p>
-            <h1 class="hero-section__title" lang="en">beauty <br />zone</h1>
+            <h1 class="hero-section__title" lang="en">beauty zone</h1>
             <div class="hero-section__button-container">
               <button class="button hero-section__button" type="button">
                 Замовити дзвінок
@@ -99,11 +173,13 @@
             <div class="about-us-images">
               <img
                 class="about-us-images__image about-us-images__before-image"
+                srcset="./images/before.jpg 1x, ./images/before@2x.jpg 2x"
                 src="./images/before.jpg"
                 alt="Photo before"
               />
               <img
                 class="about-us-images__image about-us-images__after-image"
+                srcset="./images/after.jpg 1x, ./images/after@2x.jpg 2x"
                 src="./images/after.jpg"
                 alt="Photo after"
               />
@@ -117,6 +193,9 @@
                 <use href="./images/icons.svg#icon-star"></use>
               </svg>
             </div>
+            <svg class="mobile-star" width="40" height="40">
+              <use href="./images/icons.svg#icon-star"></use>
+            </svg>
           </div>
         </div>
       </section>
@@ -162,49 +241,87 @@
           <h2 class="section-title procedures-section__title">
             Наші <span class="brand-blue">процедури</span>
           </h2>
-          <div class="procedures-section__content">
-            <button class="carousel-button" type="button">
+          <div class="procedures-section__slider">
+            <button class="carousel-button prev" type="button">
               <svg class="carousel-arrow" width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
             </button>
-            <ul class="procedures-section__list">
-              <li>
-                <div class="procedures-card">
-                  <img
-                    class="procedures-image"
-                    src="./images/mask.jpg"
-                    alt="Making mask"
-                  />
-                  <div class="procedures-card__gradient-overlay"></div>
-                  <p class="procedures-card__image-text">Маски для обличчя</p>
-                </div>
-              </li>
-              <li>
-                <div class="procedures-card">
-                  <img
-                    class="procedures-image"
-                    src="./images/injection.jpg"
-                    alt="Doing injection"
-                  />
-                  <div class="procedures-card__gradient-overlay"></div>
-                  <p class="procedures-card__image-text">
-                    Ін'єкції для обличчя
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="procedures-card">
-                  <img
-                    class="procedures-image"
-                    src="./images/clean-face.jpg"
-                    alt="Clean face demonstration"
-                  />
-                  <div class="procedures-card__gradient-overlay"></div>
-                  <p class="procedures-card__image-text">Очищення обличчя</p>
-                </div>
-              </li>
-            </ul>
+            <div class="procedures-section__container swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/mask.jpg"
+                      alt="Making mask"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">Маски для обличчя</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/injection.jpg"
+                      alt="Doing injection"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">
+                      Ін'єкції для обличчя
+                    </p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/clean-face.jpg"
+                      alt="Clean face demonstration"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">Очищення обличчя</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/mask.jpg"
+                      alt="Making mask"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">Маски для обличчя</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/injection.jpg"
+                      alt="Doing injection"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">
+                      Ін'єкції для обличчя
+                    </p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedures-card">
+                    <img
+                      class="procedures-image"
+                      src="./images/clean-face.jpg"
+                      alt="Clean face demonstration"
+                    />
+                    <div class="procedures-card__gradient-overlay"></div>
+                    <p class="procedures-card__image-text">Очищення обличчя</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="pagination"></div>
+            </div>
             <button class="carousel-button next" type="button">
               <svg class="carousel-arrow" width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
@@ -222,11 +339,11 @@
             <iframe
               class="contacts-section__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.475791668505!2d30.775223399999994!3d50.50671339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97de411b701%3A0x48116b28f7f00d94!2sTarasa%20Shevchenka%20St%2C%205%2C%20Brovary%2C%20Kyivs&#39;ka%20oblast%2C%20Ukraine%2C%2007400!5e0!3m2!1sen!2sus!4v1751881765861!5m2!1sen!2sus"
-              width="605"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+
             <div class="call-back-card">
               <h3 class="call-back-card__title">
                 Запишіться <span class="brand-blue">безкоштовно</span> <br />
@@ -303,7 +420,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
-          <div class="logo">
+          <div class="logo footer__logo">
             <a href="./index.html"
               ><img src="./images/logo.svg" alt="Beauty Zone logo"
             /></a>
@@ -349,21 +466,21 @@
             <ul class="footer__socials-list">
               <li>
                 <a href="#">
-                  <svg class="footer__socials" width="42" height="42">
+                  <svg class="footer__socials">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <svg class="footer__socials" width="42" height="42">
+                  <svg class="footer__socials">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <svg class="footer__socials" width="42" height="42">
+                  <svg class="footer__socials">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
@@ -374,6 +491,29 @@
             <a class="footer__link footer__confidential" href="#"
               >Політика конфіденційності</a
             >
+            <ul class="footer__socials-list-mobile">
+              <li>
+                <a href="#">
+                  <svg class="footer__socials">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="footer__socials">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="footer__socials">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
             <p class="footer__copy-rights">&copy; 2022 Дані захищені</p>
           </div>
         </div>
@@ -450,6 +590,9 @@
         </form>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/procedures-slider.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
